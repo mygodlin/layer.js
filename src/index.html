@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <link rel="stylesheet" href="layer.css">
+</head>
+<body>
+    <div class="layer-shade"></div>
+    <div class="layer">
+        <div class="layer-title">
+            标题
+        </div>
+        <span class="layer-close">+</span>
+        <div class="layer-content">
+            上弹出
+        </div>
+        <div class="layer-btns">
+            <span class="layer-btn-ok">确认</span>
+            <span class="layer-btn-cancel">取消</span>
+        </div>
+    </div>
+    <button onclick="test()">测试弹框</button>
+    <script src="layer.js"></script>
+    <script>
+        var layer = new Layer("layer",{
+            size: {width: "400px", height: "300px", jjj: "ewew"}
+        })
+        layer.on('confirm', function() {
+            console.log('确认操作...')
+        })
+        function test() {
+            layer.show();
+        }
+    </script>
+</body>
+</html>
